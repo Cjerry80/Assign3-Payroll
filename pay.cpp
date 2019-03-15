@@ -27,5 +27,15 @@ return 0;
 }
 
 int readData(Person employees){
-  
+ifstream infile;
+string firstname;
+string lastname;
+int companyid;
+string companyname;
+float hoursworked;
+float payrate;
+infile.open("input.txt");
+while(!infile.eof()){
+
+}
 }
