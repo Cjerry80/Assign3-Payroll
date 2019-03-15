@@ -11,7 +11,6 @@ employeeID = 0;
 companyName = " ";
 hoursWorked = 0.0;
 payRate = 0.0;
-
 }
 
 void Person::setFirstName(string fName){
