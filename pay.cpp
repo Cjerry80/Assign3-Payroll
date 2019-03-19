@@ -42,12 +42,12 @@ infile.open("input.txt");
 
 while(!infile.eof()){
 infile >> firstname >> lastname >> companyid >> companyname >> hoursworked >> payrate;
-newemployee[i].setFirstName(firstname);
-newemployee[i].setLastName(lastname);
-newemployee[i].setEmployeeId(companyid);
-newemployee[i].setCompanyName(companyname);
-newemployee[i].setHoursWorked(hoursworked);
-newemployee[i].setPayRate(payrate);
+employees[i].setFirstName(firstname);
+employees[i].setLastName(lastname);
+employees[i].setEmployeeId(companyid);
+employees[i].setCompanyName(companyname);
+employees[i].setHoursWorked(hoursworked);
+employees[i].setPayRate(payrate);
 i++;
 }
 infile.close();
