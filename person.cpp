@@ -14,7 +14,7 @@ payRate = 0.0;
 }
 
 void Person::setFirstName(string fName){
-firstName = fname;
+firstName = fName;
 }
 
 string Person::getFirstName(){

@@ -6,17 +6,18 @@ using namespace std;
 
 
 
-int readData(Person employees);
-void getCompanies(int amount, Person employees);
-
-
+int readData(int amount, vector<Person> employees);
+void getCompanies(int amount, vector<Person> employees, vector<string> companyn);
+void HighestPaid();
+void separateAndSave();
 int main(){
 
-Person vector<int> employees;
-Person vector<string> companyNames;
+vector<Person> employees;
+vector<string> companyn;
+int amount = 0;
 
-readData(employees);
-getCompanies(amount, employees);
+readData(amount, employees);
+getCompanies(amount, employees, companyn);
 
 
 
@@ -26,7 +27,7 @@ getCompanies(amount, employees);
 return 0;
 }
 
-int readData(Person employees){
+int readData(int amount, vector<Person> employees){
 ifstream infile;
 string firstname;
 string lastname;
@@ -34,8 +35,35 @@ int companyid;
 string companyname;
 float hoursworked;
 float payrate;
+
+int i = 0;
+
 infile.open("input.txt");
+
 while(!infile.eof()){
+infile >> firstname >> lastname >> companyid >> companyname >> hoursworked >> payrate;
+newemployee[i].setFirstName(firstname);
+newemployee[i].setLastName(lastname);
+newemployee[i].setEmployeeId(companyid);
+newemployee[i].setCompanyName(companyname);
+newemployee[i].setHoursWorked(hoursworked);
+newemployee[i].setPayRate(payrate);
+i++;
+}
+infile.close();
+amount = i;
+return amount;
+}
+
+void getCompanies(int amount, vector<Person> employees, vector<string> companyn){
+
 
 }
+
+void HighestPaid(){
+
+}
+
+void separateAndSave(){
+
 }
