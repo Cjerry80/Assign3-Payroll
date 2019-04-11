@@ -8,8 +8,9 @@ using namespace std;
 
 int readData(int amount, vector<Person> employees);
 void getCompanies(int amount, vector<Person> employees, vector<string> companyn);
-void HighestPaid();
+void HighestPaid(vector<Person> employees);
 void separateAndSave();
+
 int main(){
 
 vector<Person> employees;
@@ -18,7 +19,8 @@ int amount = 0;
 
 readData(amount, employees);
 getCompanies(amount, employees, companyn);
-
+HighestPaid(employees);
+separateAndSave();
 
 
 
