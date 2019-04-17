@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include <iomanip>
 using namespace std;
 
 
@@ -76,6 +77,18 @@ int count = 0;
 }
 
 void HighestPaid(){
+  int num;
+  float pay;
+  for (int i = 0; i < employees.size(); i++){
+    if (pay < employees.at(i).totalpay()){
+      pay = employees.at(i).totalpay();
+      num = i;
+    }
+  }
+cout << "Highest Paid: " << employees.at(num).fullname() << endl;
+cout << "Employee ID: " << employees.at(num).getEmployeeId() << endl;
+cout << "Employer: " << employees.at(num).getCompanyName() << endl;
+cout << "Total Pay: " << fixed << setprecision(2) << employees.at(num).totalPay() << endl;
 
 }
 
