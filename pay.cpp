@@ -7,10 +7,10 @@ using namespace std;
 
 
 
-void readData(vector<Person> employees);
-void getCompanies(vector<Person> employees, vector<string> companyn);
-void HighestPaid(vector<Person> employees);
-void separateAndSave();
+void readData(vector<Person> & employees);
+void getCompanies(vector<Person> & employees, vector<string> & companyn);
+void HighestPaid(vector<Person> & employees);
+void separateAndSave(vector<Person> & employees, vector<string> & companyn);
 
 int main(){
 
@@ -66,7 +66,7 @@ int count = 0;
     if (companyn.empty())
       companyn.push_back(name);
 
-    for (int j = 0; j < companyn.size(); i++){
+    for (int j = 0; j < companyn.size(); j++){
       if (name == companyn.at(j))
         count++;
     }
@@ -76,7 +76,7 @@ int count = 0;
 
 }
 
-void HighestPaid(){
+void HighestPaid(vector<Person> & employees){
   int num;
   float pay;
   for (int i = 0; i < employees.size(); i++){
@@ -92,6 +92,10 @@ cout << "Total Pay: " << fixed << setprecision(2) << employees.at(num).totalPay(
 
 }
 
-void separateAndSave(){
+void separateAndSave(vector<Person> & employees, vector<string> & companyn){
+  string companyname;
+  vector<Person> vect;
+
+  for (int j = 0; j < companyn.size(); j++)
 
 }
