@@ -7,8 +7,8 @@ using namespace std;
 
 
 
-void readData(int amount, vector<Person> employees);
-void getCompanies(int amount, vector<Person> employees, vector<string> companyn);
+void readData(vector<Person> employees);
+void getCompanies(vector<Person> employees, vector<string> companyn);
 void HighestPaid(vector<Person> employees);
 void separateAndSave();
 
@@ -18,8 +18,8 @@ vector<Person> employees;
 vector<string> companyn;
 
 
-readData(amount, employees);
-getCompanies(amount, employees, companyn);
+readData(employees);
+getCompanies(employees, companyn);
 HighestPaid(employees);
 separateAndSave(employees, companyn);
 
@@ -30,7 +30,7 @@ separateAndSave(employees, companyn);
 return 0;
 }
 
-void readData(int amount, vector<Person> employees){
+void readData(vector<Person> employees){
 ifstream infile;
 string firstname;
 string lastname;
@@ -57,7 +57,7 @@ infile.close();
 
 }
 
-void getCompanies(int amount, vector<Person> employees, vector<string> companyn){
+void getCompanies(vector<Person> & employees, vector<string> & companyn){
 string name;
 int count = 0;
   for (int i = 0; i < employees.size(); i++){
